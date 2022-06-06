@@ -17,6 +17,8 @@ pytest = "^7.1.2"
 isort = "^5.10.1"
 black = "^22.3.0"
 flake8 = "^4.0.1"
+flake8-bugbear = "^22.4.25"
+mypy = "^0.960"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -61,3 +63,15 @@ import_heading_stdlib = 'Standard library imports'
 import_heading_thirdparty = 'Third party imports'
 import_heading_firstparty = 'Local application imports'
 import_heading_localfolder = 'Local folder imports'
+
+[tool.mypy]
+mypy_path = "."
+warn_no_return = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
