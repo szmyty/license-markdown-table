@@ -16,18 +16,48 @@ py-markdown-table = "^0.2.2"
 pytest = "^7.1.2"
 isort = "^5.10.1"
 black = "^22.3.0"
+flake8 = "^4.0.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.black]
+line-length = 88
 target-version = ["py36", "py37", "py38", "py39"]
 include_trailing_comma = false
 include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs          # exclude a few common directories in the
+  | \.git           # root of the project
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | migrations
+
+  # The following are specific to Black, you probably don't want those.
+  | blib2to3
+  | tests/data
+)/
+'''
 
 [tool.isort]
 profile = "black"
-skip = "venv"
+skip = ["venv"]
 balanced_wrapping = true
 atomic = true
+multi_line_output = 3
+include_trailing_comma = false
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+import_heading_stdlib = 'Standard library imports'
+import_heading_thirdparty = 'Third party imports'
+import_heading_firstparty = 'Local application imports'
+import_heading_localfolder = 'Local folder imports'

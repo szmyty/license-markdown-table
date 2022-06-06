@@ -1,3 +1,4 @@
+# Third party imports
 import pkg_resources
 
 if __name__ == "__main__":

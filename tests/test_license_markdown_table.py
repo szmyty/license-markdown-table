@@ -1,3 +1,4 @@
+# Local application imports
 from license_markdown_table import __version__
 
 
