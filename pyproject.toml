@@ -72,10 +72,10 @@ include_trailing_comma = false
 force_grid_wrap = 0
 use_parentheses = true
 line_length = 88
-import_heading_stdlib = 'Standard library imports'
-import_heading_thirdparty = 'Third party imports'
-import_heading_firstparty = 'Local application imports'
-import_heading_localfolder = 'Local folder imports'
+import_heading_stdlib = "Standard Library Imports"
+import_heading_thirdparty = "Third Party Imports"
+import_heading_firstparty = "Local Application Imports"
+import_heading_localfolder = "Local Folder Imports"
 
 [tool.mypy]
 mypy_path = "."
@@ -97,7 +97,7 @@ match_dir = '(?=[^\.])(?=(?!venv)).*'
 
 [tool.coverage.run]
 branch = true
-command_line = '-m pytest'
+command_line = "-m pytest"
 source = ['./']
 
 [tool.coverage.report]
