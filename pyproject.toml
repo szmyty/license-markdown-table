@@ -19,6 +19,7 @@ black = "^22.3.0"
 flake8 = "^4.0.1"
 flake8-bugbear = "^22.4.25"
 mypy = "^0.960"
+coverage = "^6.4.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -75,3 +76,13 @@ disallow_untyped_defs = true
 disallow_incomplete_defs = true
 check_untyped_defs = true
 disallow_untyped_decorators = true
+
+[tool.coverage.run]
+branch = true
+command_line = '-m pytest'
+source = ['./']
+
+[tool.coverage.report]
+precision = 2
+skip_covered = true
+fail_under = 90
