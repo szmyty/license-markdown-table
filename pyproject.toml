@@ -11,6 +11,7 @@ keywords = ["license", "markdown"]
 python = "^3.10"
 prettytable = "^3.3.0"
 py-markdown-table = "^0.2.2"
+toml = "^0.10.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"
@@ -21,6 +22,7 @@ flake8-bugbear = "^22.4.25"
 mypy = "^0.961"
 coverage = "^6.4.1"
 bandit = "^1.7.4"
+pydocstyle = "^6.1.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -86,6 +88,12 @@ disallow_untyped_defs = true
 disallow_incomplete_defs = true
 check_untyped_defs = true
 disallow_untyped_decorators = true
+
+[tool.pydocstyle]
+inherit = false
+convention = "google"
+match = '.*\.py'
+match_dir = '(?=[^\.])(?=(?!venv)).*'
 
 [tool.coverage.run]
 branch = true
