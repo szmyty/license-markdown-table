@@ -26,6 +26,15 @@ bandit = "^1.7.4"
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.pytest.ini_options]
+minversion = "6.0"
+pythonpath = "."
+addopts = "-ra"
+testpaths = ["."]
+log_cli = "True"
+
+junit_family = "legacy"
+
 [tool.black]
 line-length = 88
 target-version = ["py36", "py37", "py38", "py39"]
